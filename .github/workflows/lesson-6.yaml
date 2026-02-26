@@ -44,7 +44,7 @@ jobs:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
-      - run: npm install && run: npm run build
+      - run: npm install && npm run build
       - run: npm start & wait-on http://localhost:3000 
       - run: cypress run --config-file=cypress.config.js
       - uses: actions/upload-artifact@v4.6.2
